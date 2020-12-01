@@ -1,4 +1,3 @@
-const { ENETDOWN } = require('constants');
 const fs = require('fs');
 const path = require('path');
 
@@ -31,3 +30,19 @@ async function partTwo() {
     }
   }
 }
+
+partOne()
+  .then(ans => {
+    console.log(`The answer for part 1 is: ${ans}`);
+  })
+.catch(error => {
+  console.error(`Part 1 failed.`, error);
+});
+
+partTwo()
+  .then(ans => {
+    console.log(`The answer for part 2 is: ${ans}`);
+  })
+.catch(error => {
+  console.error(`Part 2 failed.`, error);
+});
